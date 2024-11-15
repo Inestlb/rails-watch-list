@@ -1,0 +1,5 @@
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.association :movie, collection: Movie.all.order(:title) %>
+  <%= f.input :comment, placeholder: "comment"%>
+  <%= f.submit "GO", class: "btn btn-success"%>
+<% end %>

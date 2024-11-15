@@ -1,0 +1,6 @@
+<%# bookmark = Bookmark.find_by(@list, movie: movie) %>
+<h1>Les Films</h1>
+<%=link_to 'New Bookmark', new_list_bookmark_path(@list), class: "btn btn-primary" %>
+<% @list.movies.each do |movie| %>
+<%= movie.title %>
+<% end %>
